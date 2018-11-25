@@ -1,4 +1,4 @@
-React
+React -- Megan's notes
 * All pieces are reusable components
 * Render out components
 * Components/things need to be imported into files
@@ -80,3 +80,7 @@ React
 // Understanding State
 * object that lives inside of a component and all the data that that componenet needs and children need
 * "Single source of truth"
+* data lives in state
+* set initial state in app.js if its a string set it as state = '', number = null, etc.
+* don't want to update state directly (mutation)
+1. Make a copy
