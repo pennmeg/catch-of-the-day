@@ -1,0 +1,63 @@
+React
+* All pieces are reusable components
+* Render out components
+* Components/things need to be imported into files
+
+// State
+* Updates any changes to a components state to all components
+
+// StorePicker.js
+* need to import React into all components
+* export components so they can be used in other files
+
+// JSX
+* not required to write react
+* Ex: <p>Hey</p>
+* class = className
+* Look into using emet
+* ASI
+* use return (and then write code with indentations)
+* Can only return one element (cannot return sibling elements)
+* React 16.2 >> allows siblings to be used in <React.Fragment>
+* Using comments in JSX, curly brackets mean I am using JS vs. JSX Ex: { /* Comment */ }
+* Comments need to go inside elements, you cannot return a comment and element
+
+// Connecting CSS
+1. link tag in HTML
+2. inline CSS into the component
+3. import into index.js
+
+// props
+* in HTML attributes provide more information to the tag
+* in React these are call props (the way we get data into a component)
+* this.props.example
+* this = instance
+* props = properties/what property
+* "just" an object
+* each are their own instance
+
+// Stateless functional component
+* things like headers don't do anything, they just sit there
+* no "this" in a function, it instead gets props (examples 2 and 3)
+* 4 is an implict return
+* props. is no longer needed in example 6
+* different ways of writing the same component
+1. class Header extends React.Component { render() { return ( ... )}}
+2. function Header(props) { return ( ... )}
+3. const Header = (props) => { return ( ... )}
+4. const Header = (props) => ( ... )
+5. const Header = props => ( ... )
+6. const Header = ({ tagline, age }) => ( ... )
+
+// Routing
+* not baked into React
+* React Router and Next.js
+
+// Helper Functions
+* helpers.js file
+* export function ..
+* import { function } from "../etc"
+
+// Tips
+* $r shows what is clicked on in dev tools
+* values of components are connected to state therefore use defaultValue in react not value
