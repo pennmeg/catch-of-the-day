@@ -52,12 +52,31 @@ React
 // Routing
 * not baked into React
 * React Router and Next.js
+* use push to change page information without reloading (i.e. url)
 
 // Helper Functions
 * helpers.js file
 * export function ..
 * import { function } from "../etc"
 
+// React events
+* Synthetic event (to make sure things work across all browsers and devices)
+* in JS you would link up event with id in html and js file
+* in React you use onClick={this.handleClick} << function, before render() write in function inline
+* to not run on page load use handleClick not handleClick()
+* not supposed to touch the DOM instead use ref
+
+// Binding in react
+* componenetDidMount
+* new functions are not bound by default
+* creates undefined componenents with bind
+1. constructor() { super(); this.goToStore = this.goToStore.bind(this); }
+2. goToStore = (event) => { }
+
 // Tips
 * $r shows what is clicked on in dev tools
 * values of components are connected to state therefore use defaultValue in react not value
+
+// Understanding State
+* object that lives inside of a component and all the data that that componenet needs and children need
+* "Single source of truth"
