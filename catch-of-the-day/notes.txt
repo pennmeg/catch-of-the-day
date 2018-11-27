@@ -84,3 +84,4 @@ React -- Megan's notes
 * set initial state in app.js if its a string set it as state = '', number = null, etc.
 * don't want to update state directly (mutation)
 1. Make a copy
+* How does data get anywhere? Props?!
