@@ -85,3 +85,9 @@ React -- Megan's notes
 * don't want to update state directly (mutation)
 1. Make a copy
 * How does data get anywhere? Props?!
+
+// Fish.js
+* add to order click Option 1
+handleClick = () => {
+    this.props.addToOrder(this.props.index);
+  };
