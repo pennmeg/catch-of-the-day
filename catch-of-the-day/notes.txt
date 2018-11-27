@@ -89,5 +89,11 @@ React -- Megan's notes
 // Fish.js
 * add to order click Option 1
 handleClick = () => {
-    this.props.addToOrder(this.props.index);
-  };
+  this.props.addToOrder(this.props.index);
+};
+
+// Passing State
+* Option 1
+<Order fishes={this.state.fishes} order={this.state.order}/>
+* Option 2 (all things get passed)
+<Order {...this.state}/>
