@@ -98,3 +98,10 @@ handleClick = () => {
 * Option 2 (all things get passed)
 <Order {...this.state}/>
 * with .reduce(); you always need a starting value
+* need a key so React can find it quickly
+
+// Firebase
+* Through Google
+* Instant database update
+in base.js
+* Rebase allows mirroring of app and firebase
