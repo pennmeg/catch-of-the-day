@@ -16,7 +16,10 @@ class App extends React.Component {
       context: this,
       state: 'fishes'
     });
-  }
+  };
+  componentWillUmount(){
+    base.removeBinding(this.ref);
+  };
   addFish = (fish) => {
     // console.log("Adding a Fish");
     // Updating State 1: take a copy of the existing state
