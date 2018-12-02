@@ -105,3 +105,9 @@ handleClick = () => {
 * Instant database update
 in base.js
 * Rebase allows mirroring of app and firebase
+
+// Removing items from State
+C reate
+R ead
+U pdate
+D elete
