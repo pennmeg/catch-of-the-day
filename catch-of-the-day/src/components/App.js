@@ -65,6 +65,11 @@ class App extends React.Component {
     // call setstate to update our state object
     this.setState({ order: order });
   };
+  removeFromOrder = (key) => {
+    const order = {...this.state.order};
+    delete order[key];
+    this.setState({ order });
+  }
   render() {
     return (
       <div className="catch-of-the-day">
@@ -74,7 +79,7 @@ class App extends React.Component {
             {Object.keys(this.state.fishes).map(key => <Fish addToOrder={this.addToOrder} index={key} key={key} details={this.state.fishes[key]} />)}
           </ul>
         </div>
-        <Order fishes={this.state.fishes} order={this.state.order}/>
+        <Order fishes={this.state.fishes} order={this.state.order} removeFromOrder={this.removeFromOrder}/>
         <Inventory addFish={this.addFish} updateFish={this.updateFish} deleteFish={this.deleteFish} loadSampleFishes={this.loadSampleFishes} fishes={this.state.fishes}/>
       </div>
     )
