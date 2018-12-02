@@ -97,3 +97,4 @@ handleClick = () => {
 <Order fishes={this.state.fishes} order={this.state.order}/>
 * Option 2 (all things get passed)
 <Order {...this.state}/>
+* with .reduce(); you always need a starting value
