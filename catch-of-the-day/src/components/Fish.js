@@ -1,21 +1,33 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { formatPrice } from "../helpers";
 
 class Fish extends React.Component {
+  static propTypes = {
+    details: PropTypes.shape({
+      image: PropTypes.string,
+      name: PropTypes.string,
+      desc: PropTypes.string,
+      status: PropTypes.string,
+      price: PropTypes.number
+    }),
+    addToOrder: PropTypes.func
+  }
   render() {
-    const details = this.props.details;
-    const isAvailable = details.status === 'available';
+    const { image, name, price, desc, status } = this.props.details;
+    const isAvailable = status === 'available';
     return (
       <li className="menu-fish">
-        <img src={details.image} alt={details.name} />
+        <img src={image} alt={name} />
         <h3 className="fish-name">
-          {details.name}
-          <span className="price">{formatPrice(details.price)}</span>
+          {name}
+          <span className="price">{formatPrice(price)}</span>
         </h3>
-        <p>{details.desc}</p>
+        <p>{desc}</p>
         <button disabled={!isAvailable} onClick={() => this.props.addToOrder(this.props.index)}>{isAvailable ? 'Add To Order' : 'Sold Out!'}</button>
       </li>
     );
   }
-}
+};
+
 export default Fish;

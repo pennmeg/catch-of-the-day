@@ -111,3 +111,8 @@ C reate
 R ead
 U pdate
 D elete
+
+// Prop types
+* allows you to set prop types (what sort of props is required, etc.) for Components
+* gives errors in console, that are only visible in dev
+* anytime you write this.props.(something) you should write a PropTypes
